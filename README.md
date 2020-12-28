@@ -2,7 +2,7 @@
 
 # [LIVE](https://trabalhofinalmbafiap-a0384.web.app)
 ## ATIVIDADE 8 print
-[atv-8](.github/assets/atv-8.png)
+![atv-8](.github/assets/atv-8.png)
 
 
 Object Oriented and Design Patterned JavaScript ES2015+ "Minhas Finanças" Project. 
