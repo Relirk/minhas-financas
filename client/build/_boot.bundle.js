@@ -97,7 +97,9 @@ document.querySelector('form').onsubmit = financaController.adiciona.bind(financ
 document.querySelector('#btn-import').onclick = financaController.importaFinancas.bind(financaController);
 document.querySelector('#btn-apaga').onclick = financaController.apaga.bind(financaController); // ATIVIDADE 2
 
-document.querySelector('#btn-filtro').onclick = financaController.filtra.bind(financaController);
+document.querySelector('#btn-filtro').onclick = financaController.filtra.bind(financaController); // ATIVIDADE 5
+
+document.querySelector('#btn-limpar').onclick = financaController.limpar.bind(financaController);
 
 /***/ }),
 /* 1 */
@@ -136,7 +138,8 @@ var FinancaController = /*#__PURE__*/function () {
     this._inputQuantidade = $("#quantidade");
     this._inputValor = $("#valor"); // ATIVIDADE 4
 
-    this._inputFiltro = $("#filtro");
+    this._inputFiltro = $("#filtro"); // ATIVIDADE 5
+
     this._listaFinancas = new _models_ListaFinancas__WEBPACK_IMPORTED_MODULE_2__["ListaFinancas"]();
     this._financasView = new _views_FinancasView__WEBPACK_IMPORTED_MODULE_5__["FinancasView"]($("#financasView"), this);
 
@@ -233,8 +236,6 @@ var FinancaController = /*#__PURE__*/function () {
   }, {
     key: "filtra",
     value: function filtra() {
-      debugger;
-
       if (this._inputFiltro.value === "") {
         this._financasView.update(this._listaFinancas);
       } else {
@@ -243,6 +244,12 @@ var FinancaController = /*#__PURE__*/function () {
 
         this._financasView.update(listaFiltrada);
       }
+    } // ATIVIDADE 5
+
+  }, {
+    key: "limpar",
+    value: function limpar() {
+      this._financasView.update(this._listaFinancas);
     }
   }, {
     key: "coluna",

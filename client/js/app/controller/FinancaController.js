@@ -15,6 +15,7 @@ export class FinancaController {
         this._inputValor = $("#valor")
         // ATIVIDADE 4
         this._inputFiltro = $("#filtro")
+        // ATIVIDADE 5
 
         this._listaFinancas = new ListaFinancas()
         this._financasView = new FinancasView($("#financasView"), this)
@@ -113,6 +114,11 @@ export class FinancaController {
             )
             this._financasView.update(listaFiltrada)
         }
+    }
+
+    // ATIVIDADE 5
+    limpar() {
+        this._financasView.update(this._listaFinancas)
     }
 
 }
